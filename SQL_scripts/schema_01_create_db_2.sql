@@ -13,16 +13,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `segr5300` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
 -- -----------------------------------------------------
--- Schema segr5300
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema segr5300
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `segr5300` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
-USE `segr5300` ;
-
--- -----------------------------------------------------
 -- Table `segr5300`.`country`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `segr5300`.`country` (
@@ -123,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `segr5300`.`alumni` (
     REFERENCES `segr5300`.`company` (`company_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `city_id`
+  CONSTRAINT `alumni_city_id`
     FOREIGN KEY (`city_id`)
     REFERENCES `segr5300`.`city` (`city_id`)
     ON DELETE NO ACTION
