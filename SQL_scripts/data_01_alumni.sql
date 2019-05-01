@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+use segr5300;
+>>>>>>> 73b58a400ccb8eb0daf79126ff642365eeb1b681
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300300, 400400, 'Cannon Hodges', 'Canno.HODGES3862@hushmail.com', '8315765965', '3172 37th', 'Murfreesboro', 'United States', '37136', 'Amkor Technology');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300301, 400401, 'Alexzander Boyd', 'Alexzander.BO6399@live.com', '5109280717', '2141 Albion', 'Baton Rouge', 'United States', '70364', 'The Clorox Company');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300302, 400402, 'Elisha Cobb', 'Eli.COB7833@hushmail.com', '8155263532', '6323 Rumsey', 'Toledo', 'United States', '43806', 'Kellogg Company');
@@ -36,7 +40,11 @@ INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, a
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300335, 400435, 'Simon Conrad', 'Sim.CONR3765@hushmail.com', '4248910089', '7719 Eisenhower Homan Av', 'Tallahassee', 'United States', '32332', 'Domtar Corp');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300336, 400436, 'Issac Todd', 'Issac.TO6284@yahoo.com', '3043608206', '1414 Farragut', 'Hartford', 'United States', '06112', 'The Pantry');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300337, 400437, 'Nancy Wade', 'Nanc.WA3325@mail2web.com', '2241133153', '730 Archer', 'Detroit', 'United States', '48592', 'Spartannash');
+<<<<<<< HEAD
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300338, 400438, 'Ian Salinas', 'Ian.SALINAS9157@live.com', '2568429637', '5082 Eisenhower Canal', 'Oxnard', 'United States', '93038', 'Starwood Hotels & Resorts Worldwide');
+=======
+INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300338, 400438, 'Ian Salinas', 'Ian.SALINAS9157@live.com', '2568429637', '5082 Eisenhower Canal', 'Oxnard', 'United States', '93038', 'Starwood Hotels');
+>>>>>>> 73b58a400ccb8eb0daf79126ff642365eeb1b681
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300339, 400439, 'Johan Deleon', 'Jo.DEL9158@hushmail.com', '2488371637', '4354 Reta', 'Raleigh', 'United States', '27869 ', 'The Gap');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300340, 400440, 'Randy Murphy', 'Randy.MURP3365@yahoo.com', '8189721265', '8383 Loron', 'Norman', 'United States', '73033', 'First Data Corporation');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300341, 400441, 'Santino Hudson', 'San.HUDSO4618@live.com', '8458814890', '5142 Lill', 'Jacksonville', 'United States', '32905', 'B/e Aerospace');
@@ -48,4 +56,8 @@ INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, a
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300347, 400447, 'Sabrina Mitchell', 'Sabr.MITC9479@gmail.com', '2161928797', '4454 Stewart', 'Hollywood', 'United States', '33011', 'Wesco Distribution');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300348, 400448, 'Liberty Shelton', 'Liberty.SHE3716@live.com', '8654180626', '8780 Pratt', 'St. Louis', 'United States', '63428', 'Bed Bath And Beyond');
 INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_add, alumni_postal_city, alumni_postal_coun, alumni_postal_zip, alumni_company) VALUES (300349, 400449, 'Jedidiah Blackburn', 'Jedid.BLACKBUR7309@yahoo.com', '3616232540', '1058 Seminary', 'Little Rock', 'United States', '72121 ', 'Bob Evans Farms');
+<<<<<<< HEAD
                                                                                                                                                                                , 
+=======
+                                                                                                                                                                               
+>>>>>>> 73b58a400ccb8eb0daf79126ff642365eeb1b681
