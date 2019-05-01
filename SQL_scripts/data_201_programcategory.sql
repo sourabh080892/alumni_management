@@ -1,4 +1,5 @@
 use segr5300;
+# program categories
 INSERT INTO program_categories 
 (program_categories_id, program_categories_name)
 VALUES ('1','Graduate');
