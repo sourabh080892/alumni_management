@@ -1,0 +1,10 @@
+INSERT INTO city (city_id, city_name, country_id) VALUES (1, 'Syracuse', 1);
+INSERT INTO city (city_id, city_name, country_id) VALUES (2, 'Honolulu', 10);
+INSERT INTO city (city_id, city_name, country_id) VALUES (3, 'Mobile', 8);
+INSERT INTO city (city_id, city_name, country_id) VALUES (4, 'West Valley City', 2);
+INSERT INTO city (city_id, city_name, country_id) VALUES (5, 'Rochester', 7);
+INSERT INTO city (city_id, city_name, country_id) VALUES (6, 'Tulsa', 3);
+INSERT INTO city (city_id, city_name, country_id) VALUES (7, 'Long Beach', 2);
+INSERT INTO city (city_id, city_name, country_id) VALUES (8, 'Chattanooga', 6);
+INSERT INTO city (city_id, city_name, country_id) VALUES (9, 'Tacoma', 3);
+INSERT INTO city (city_id, city_name, country_id) VALUES (10, 'Kansas City', 3);
