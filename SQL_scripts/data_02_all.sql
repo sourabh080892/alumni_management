@@ -391,5 +391,5 @@ VALUES
 ,(26, 'Annual Scholarship fund', 100, 39)
 ,(27, 'New Research Lab', 200, 41)
 ,(28, 'New Machine Learning Building', 100, 49)
-,(29, 'Annual International Scholarship fund', 100, 58)
-,(30, 'New Machine Learning Building', 100, 59);
+,(29, 'Annual International Scholarship fund', 100, 51)
+,(30, 'New Machine Learning Building', 100, 50);
