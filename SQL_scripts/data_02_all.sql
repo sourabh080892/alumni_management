@@ -2,346 +2,394 @@ use segr5300;
 # program categories
 INSERT INTO program_categories 
 (program_categories_id, program_categories_name)
-VALUES ('1','Graduate');
-INSERT INTO program_categories (program_categories_id, program_categories_name)
- VALUES ('2','Under Graduate');
-INSERT INTO program_categories (program_categories_id, program_categories_name) VALUES ('3','Certificate');
+VALUES (1,'Graduate'),
+		('2','Under Graduate'),
+		('3','Certificate');
 
 #department
-INSERT INTO department (department_id, department_name) VALUES ('60','Art and Art History');
-INSERT INTO department (department_id, department_name) VALUES ('01','Accounting');
-INSERT INTO department (department_id, department_name) VALUES ('02','Adult Education & Training');
-INSERT INTO department (department_id, department_name) VALUES ('03','Anthropology, Sociology, & Social work');
-INSERT INTO department (department_id, department_name) VALUES ('04','Biology');
-INSERT INTO department (department_id, department_name) VALUES ('05','Business School');
-INSERT INTO department (department_id, department_name) VALUES ('06','Civil/Environmental Engineering');
-INSERT INTO department (department_id, department_name) VALUES ('07','Chemistry');
-INSERT INTO department (department_id, department_name) VALUES ('08','Culture and Language Bridge');
-INSERT INTO department (department_id, department_name) VALUES ('09','Communication/Journalism');
-INSERT INTO department (department_id, department_name) VALUES ('10','Counseling');
-INSERT INTO department (department_id, department_name) VALUES ('11','Criminal Justice');
-INSERT INTO department (department_id, department_name) VALUES ('12','Computer Science/Software Engineering');
-INSERT INTO department (department_id, department_name) VALUES ('13','Center for the Study of Sport');
-INSERT INTO department (department_id, department_name) VALUES ('14','Curriculum & Instruction');
-INSERT INTO department (department_id, department_name) VALUES ('15','Digital Cultures');
-INSERT INTO department (department_id, department_name) VALUES ('16','Diagnostic Ultrasound');
-INSERT INTO department (department_id, department_name) VALUES ('17','Electrical/Computer Engineering');
-INSERT INTO department (department_id, department_name) VALUES ('18','Economics');
-INSERT INTO department (department_id, department_name) VALUES ('19','Education Administration');
-INSERT INTO department (department_id, department_name) VALUES ('20','Education Leadership');
-INSERT INTO department (department_id, department_name) VALUES ('21','Education Professional Development');
-INSERT INTO department (department_id, department_name) VALUES ('22','General Education');
-INSERT INTO department (department_id, department_name) VALUES ('23','Educating Non-Native English Speakers');
-INSERT INTO department (department_id, department_name) VALUES ('24','English');
-INSERT INTO department (department_id, department_name) VALUES ('25','Center for Leadership Formation');
-INSERT INTO department (department_id, department_name) VALUES ('26','Finance');
-INSERT INTO department (department_id, department_name) VALUES ('27','History');
-INSERT INTO department (department_id, department_name) VALUES ('28','Interdisciplinary Liberal Studies');
-INSERT INTO department (department_id, department_name) VALUES ('29','International Studies');
-INSERT INTO department (department_id, department_name) VALUES ('30','Institute of Public Service');
-INSERT INTO department (department_id, department_name) VALUES ('31','Interdisciplinary Studies');
-INSERT INTO department (department_id, department_name) VALUES ('32','Kinesiology');
-INSERT INTO department (department_id, department_name) VALUES ('33','Law School');
-INSERT INTO department (department_id, department_name) VALUES ('34','Literacy for Diverse Learners');
-INSERT INTO department (department_id, department_name) VALUES ('35','Mathematics');
-INSERT INTO department (department_id, department_name) VALUES ('36','Modern Languages');
-INSERT INTO department (department_id, department_name) VALUES ('37','Mechanical Engineering');
-INSERT INTO department (department_id, department_name) VALUES ('38','Management');
-INSERT INTO department (department_id, department_name) VALUES ('39','Marketing');
-INSERT INTO department (department_id, department_name) VALUES ('40','Matteo Ricci');
-INSERT INTO department (department_id, department_name) VALUES ('41','Nursing');
-INSERT INTO department (department_id, department_name) VALUES ('42','Organizational Leadership-NCS');
-INSERT INTO department (department_id, department_name) VALUES ('43','Performing Arts & Arts Leadership');
-INSERT INTO department (department_id, department_name) VALUES ('44','Philosophy');
-INSERT INTO department (department_id, department_name) VALUES ('45','Physics');
-INSERT INTO department (department_id, department_name) VALUES ('46','Political Science');
-INSERT INTO department (department_id, department_name) VALUES ('47','Pre-Collegiate High School Program');
-INSERT INTO department (department_id, department_name) VALUES ('48','Psychology');
-INSERT INTO department (department_id, department_name) VALUES ('49','Study Abroad');
-INSERT INTO department (department_id, department_name) VALUES ('50','Sport Administration & Leadership');
-INSERT INTO department (department_id, department_name) VALUES ('51','Student Development Administration');
-INSERT INTO department (department_id, department_name) VALUES ('52','Special Education');
-INSERT INTO department (department_id, department_name) VALUES ('53','School Psychology');
-INSERT INTO department (department_id, department_name) VALUES ('54','School of Theology & Ministry');
-INSERT INTO department (department_id, department_name) VALUES ('55','Teacher Education');
-INSERT INTO department (department_id, department_name) VALUES ('56','Theology and Religious Studies');
-INSERT INTO department (department_id, department_name) VALUES ('57','Teaching English to Speakers of Other Languages');
-INSERT INTO department (department_id, department_name) VALUES ('58','University Core');
-INSERT INTO department (department_id, department_name) VALUES ('59','Web Application & Technology Studies');
+INSERT INTO department (department_id, department_name) 
+VALUES (1,'Accounting')
+,(2,'Adult Education & Training')
+,(3,'Anthropology, Sociology, & Social work')
+,(4,'Biology')
+,(5,'Business School')
+,(6,'Civil/Environmental Engineering')
+,(7,'Chemistry')
+,(8,'Culture and Language Bridge')
+,(9,'Communication/Journalism')
+,(10,'Counseling')
+,(11,'Criminal Justice')
+,(12,'Computer Science/Software Engineering')
+,(13,'Center for the Study of Sport')
+,(14,'Curriculum & Instruction')
+,(15,'Digital Cultures')
+,(16,'Diagnostic Ultrasound')
+,(17,'Electrical/Computer Engineering')
+,(18,'Economics')
+,(19,'Education Administration')
+,(20,'Education Leadership')
+,(21,'Education Professional Development')
+,(22,'General Education')
+,(23,'Educating Non-Native English Speakers')
+,(24,'English')
+,(25,'Center for Leadership Formation')
+,(26,'Finance')
+,(27,'History')
+,(28,'Interdisciplinary Liberal Studies')
+,(29,'International Studies')
+,(30,'Institute of Public Service')
+,(31,'Interdisciplinary Studies')
+,(32,'Kinesiology')
+,(33,'Law School')
+,(34,'Literacy for Diverse Learners')
+,(35,'Mathematics')
+,(36,'Modern Languages')
+,(37,'Mechanical Engineering')
+,(38,'Management')
+,(39,'Marketing')
+,(40,'Matteo Ricci')
+,(41,'Nursing')
+,(42,'Organizational Leadership-NCS')
+,(43,'Performing Arts & Arts Leadership')
+,(44,'Philosophy')
+,(45,'Physics')
+,(46,'Political Science')
+,(47,'Pre-Collegiate High School Program')
+,(48,'Psychology')
+,(49,'Study Abroad')
+,(50,'Sport Administration & Leadership')
+,(51,'Student Development Administration')
+,(52,'Special Education')
+,(53,'School Psychology')
+,(54,'School of Theology & Ministry')
+,(55,'Teacher Education')
+,(56,'Theology and Religious Studies')
+,(57,'Teaching English to Speakers of Other Languages')
+,(58,'University Core')
+,(59,'Web Application & Technology Studies')
+,(60,'Art and Art History');
 
 #program
 
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (01, 'Mechanical Engineering', '1910-10-31', '37', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (02, 'Computer Science', '1981-12-16', '12', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (03, 'Civil and Environmental Engineering ', '1929-05-16', '06', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (04, 'MSBA', '1996-03-12', '05', 1);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (05, 'Chemistry', '2007-10-12', '07', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (06, 'MSF', '1985-02-23', '26', 1);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (07, 'PMBA', '2005-04-30', '05', 1);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (08, 'Business 118omics', '1921-12-09', '05', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (09, 'Sociology', '2008-01-23', '03', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (10, 'Finance', '1991-03-01', '26', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (11, 'Business and Law', '1973-09-09', '05', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (12, 'Business Analytics', '1906-05-22', '05', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (13, 'BRMB', '2013-04-18', '05', 1);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (14, 'MPAC', '1904-07-11', '01', 1);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (15, 'MSBL', '1932-04-24', '05', 1);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (16, 'MSBA', '1982-10-03', '05', 1);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (17, 'Information System', '1988-02-01', '05', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (18, 'Marketing', '1961-01-13', '39', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (19, '118omics', '1944-02-21', '18', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (20, '107ory', '2005-08-01', '27', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (21, 'Management', '1972-04-29', '38', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (22, 'Mathematics', '2009-04-03', '35', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (23, 'International Business', '2001-09-24', '29', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (24, 'Psychology ', '2009-04-03', '53', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (25, 'Accounting', '1995-02-09', '01', 2);
-INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) VALUES (26, 'Nursing', '2009-04-03', '41', 2);
+INSERT INTO program (program_id,program_name, program_begin_date,department_id, program_categories_id) 
+VALUES (01, 'Mechanical Engineering', '1910-10-31', '37', 2)
+,(02, 'Computer Science', '1981-12-16', '12', 2)
+,(03, 'Civil and Environmental Engineering ', '1929-05-16', '06', 2)
+,(04, 'MSBA', '1996-03-12', '05', 1)
+,(05, 'Chemistry', '2007-10-12', '07', 2)
+,(06, 'MSF', '1985-02-23', '26', 1)
+,(07, 'PMBA', '2005-04-30', '05', 1)
+,(08, 'Business 118omics', '1921-12-09', '05', 2)
+,(09, 'Sociology', '2008-01-23', '03', 2)
+,(10, 'Finance', '1991-03-01', '26', 2)
+,(11, 'Business and Law', '1973-09-09', '05', 2)
+,(12, 'Business Analytics', '1906-05-22', '05', 2)
+,(13, 'BRMB', '2013-04-18', '05', 1)
+,(14, 'MPAC', '1904-07-11', 1, 1)
+,(15, 'MSBL', '1932-04-24', '05', 1)
+,(16, 'MSBA', '1982-10-03', '05', 1)
+,(17, 'Information System', '1988-02-01', '05', 2)
+,(18, 'Marketing', '1961-01-13', '39', 2)
+,(19, '118omics', '1944-02-21', '18', 2)
+,(20, '107ory', '2005-08-01', '27', 2)
+,(21, 'Management', '1972-04-29', '38', 2)
+,(22, 'Mathematics', '2009-04-03', '35', 2)
+,(23, 'International Business', '2001-09-24', '29', 2)
+,(24, 'Psychology ', '2009-04-03', '53', 2)
+,(25, 'Accounting', '1995-02-09', 1, 2)
+,(26, 'Nursing', '2009-04-03', '41', 2);
 
 #country
-INSERT INTO country (country_id, country_name) VALUES (11, 'China');
-INSERT INTO country (country_id, country_name) VALUES (1, 'Norway');
-INSERT INTO country (country_id, country_name) VALUES (2, 'Korea');
-INSERT INTO country (country_id, country_name) VALUES (3, 'Brazil');
-INSERT INTO country (country_id, country_name) VALUES (4, 'Vietnam');
-INSERT INTO country (country_id, country_name) VALUES (5, 'United States');
-INSERT INTO country (country_id, country_name) VALUES (6, 'Germany');
-INSERT INTO country (country_id, country_name) VALUES (7, 'Australia');
-INSERT INTO country (country_id, country_name) VALUES (8, 'Argentina');
-INSERT INTO country (country_id, country_name) VALUES (9, 'Canada');
-INSERT INTO country (country_id, country_name) VALUES (10, 'United Kingdom');
-INSERT INTO country (country_id, country_name) VALUES (12, 'India');
+INSERT INTO country (country_id, country_name) VALUES 
+(1, 'Norway')
+,(2, 'Korea')
+,(3, 'Brazil')
+,(4, 'Vietnam')
+,(5, 'United States')
+,(6, 'Germany')
+,(7, 'Australia')
+,(8, 'Argentina')
+,(9, 'Canada')
+,(10, 'United Kingdom')
+,(11, 'China')
+,(12, 'India');
 
 #city
-INSERT INTO city (city_id, city_name, country_id) VALUES (1, 'Syracuse', 1);
-INSERT INTO city (city_id, city_name, country_id) VALUES (2, 'Honolulu', 10);
-INSERT INTO city (city_id, city_name, country_id) VALUES (3, 'Mobile', 8);
-INSERT INTO city (city_id, city_name, country_id) VALUES (4, 'West Valley City', 2);
-INSERT INTO city (city_id, city_name, country_id) VALUES (5, 'Rochester', 7);
-INSERT INTO city (city_id, city_name, country_id) VALUES (6, 'Tulsa', 3);
-INSERT INTO city (city_id, city_name, country_id) VALUES (7, 'Long Beach', 2);
-INSERT INTO city (city_id, city_name, country_id) VALUES (8, 'Chattanooga', 6);
-INSERT INTO city (city_id, city_name, country_id) VALUES (9, 'Tacoma', 3);
-INSERT INTO city (city_id, city_name, country_id) VALUES (10, 'Kansas City', 3);
-INSERT INTO city (city_id, city_name, country_id) VALUES (11, 'New Delhi', 12);
+INSERT INTO city (city_id, city_name, country_id) VALUES 
+(1, 'Syracuse', 1)
+,(2, 'Honolulu', 10)
+,(3, 'Mobile', 8)
+,(4, 'West Valley City', 2)
+,(5, 'Rochester', 7)
+,(6, 'Tulsa', 3)
+,(7, 'Long Beach', 2)
+,(8, 'Chattanooga', 6)
+,(9, 'Tacoma', 3)
+,(10, 'Kansas City', 3)
+,(11, 'New Delhi', 12);
 
 #company
-INSERT INTO company (company_id, company_name) VALUES (01, 'Adams Resources & Energy');
-INSERT INTO company (company_id, company_name) VALUES (02, 'Campbell Soup Company');
-INSERT INTO company (company_id, company_name) VALUES (03, 'Synnex Corporation');
-INSERT INTO company (company_id, company_name) VALUES (04, 'Oge Energy Corp');
-INSERT INTO company (company_id, company_name) VALUES (05, 'Allstate');
-INSERT INTO company (company_id, company_name) VALUES (06, 'Patriot Coal Corporation');
-INSERT INTO company (company_id, company_name) VALUES (07, 'Agco Corporation');
-INSERT INTO company (company_id, company_name) VALUES (08, 'Union Pacific Corporation');
-INSERT INTO company (company_id, company_name) VALUES (09, 'A.o. Smith Corporation');
-INSERT INTO company (company_id, company_name) VALUES (10, 'Baxter International');
-INSERT INTO company (company_id, company_name) VALUES (11, 'Reliance Steel And Aluminum');
-INSERT INTO company (company_id, company_name) VALUES (12, 'Select Medical Corporation');
-INSERT INTO company (company_id, company_name) VALUES (13, 'Abercrombie & Fitch Co');
-INSERT INTO company (company_id, company_name) VALUES (14, 'Chevron Corp');
-INSERT INTO company (company_id, company_name) VALUES (15, 'Allstate Insurance Company');
-INSERT INTO company (company_id, company_name) VALUES (16, 'Carter''s');
-INSERT INTO company (company_id, company_name) VALUES (17, 'Sanderson Farms');
-INSERT INTO company (company_id, company_name) VALUES (18, 'Kiewit');
-INSERT INTO company (company_id, company_name) VALUES (19, 'Continental Airlines');
-INSERT INTO company (company_id, company_name) VALUES (20, 'Jarden Corporation');
-INSERT INTO company (company_id, company_name) VALUES (21, 'Cummins Engine');
-INSERT INTO company (company_id, company_name) VALUES (22, 'Capital One Financial Corporation');
-INSERT INTO company (company_id, company_name) VALUES (23, 'Exxonmobil');
-INSERT INTO company (company_id, company_name) VALUES (24, 'Freeport-mcmoran Copper & Gold');
-INSERT INTO company (company_id, company_name) VALUES (25, 'Quiksilver');
-INSERT INTO company (company_id, company_name) VALUES (26, 'Adobe Systemsorporated');
-INSERT INTO company (company_id, company_name) VALUES (27, 'Levi Strauss And Co');
-INSERT INTO company (company_id, company_name) VALUES (28, 'Hasbro');
-INSERT INTO company (company_id, company_name) VALUES (29, 'W. R. Berkley Corporation');
-INSERT INTO company (company_id, company_name) VALUES (30, 'Metlife');
-INSERT INTO company (company_id, company_name) VALUES (31, 'Southern Company');
-INSERT INTO company (company_id, company_name) VALUES (32, 'Targa Resources');
-INSERT INTO company (company_id, company_name) VALUES (33, 'Ametek');
-INSERT INTO company (company_id, company_name) VALUES (34, 'Reader''s Digest Association');
-INSERT INTO company (company_id, company_name) VALUES (35, 'Directv');
-INSERT INTO company (company_id, company_name) VALUES (36, 'American Tire Distributors');
-INSERT INTO company (company_id, company_name) VALUES (37, 'Berry Plastics Corporation');
-INSERT INTO company (company_id, company_name) VALUES (38, 'The Kroger Co');
-INSERT INTO company (company_id, company_name) VALUES (39, 'Coventry Health Care');
-INSERT INTO company (company_id, company_name) VALUES (40, 'Bristol Myers Squibb Company');
-INSERT INTO company (company_id, company_name) VALUES (41, 'Flowers Foods');
-INSERT INTO company (company_id, company_name) VALUES (42, 'Genworth Financial');
-INSERT INTO company (company_id, company_name) VALUES (43, 'Nationwide Insurance Company');
-INSERT INTO company (company_id, company_name) VALUES (44, 'The Scotts Miracle-gro Company');
-INSERT INTO company (company_id, company_name) VALUES (45, 'Bio-rad Laboratories');
-INSERT INTO company (company_id, company_name) VALUES (46, 'Teradata Corporation');
-INSERT INTO company (company_id, company_name) VALUES (47, 'Constellation Brands');
-INSERT INTO company (company_id, company_name) VALUES (48, 'Republic Airways Holdings');
-INSERT INTO company (company_id, company_name) VALUES (49, 'Republic Services');
-INSERT INTO company (company_id, company_name) VALUES (50, 'Graphic Packaging Holding Company');
-INSERT INTO company (company_id, company_name) VALUES (51, 'Beckman Coulter');
+INSERT INTO company (company_id, company_name) VALUES 
+(01, 'Adams Resources & Energy')
+,(02, 'Campbell Soup Company')
+,(03, 'Synnex Corporation')
+,(04, 'Oge Energy Corp')
+,(05, 'Allstate')
+,(06, 'Patriot Coal Corporation')
+,(07, 'Agco Corporation')
+,(08, 'Union Pacific Corporation')
+,(09, 'A.o. Smith Corporation')
+,(10, 'Baxter International')
+,(11, 'Reliance Steel And Aluminum')
+,(12, 'Select Medical Corporation')
+,(13, 'Abercrombie & Fitch Co')
+,(14, 'Chevron Corp')
+,(15, 'Allstate Insurance Company')
+,(16, 'Carter''s')
+,(17, 'Sanderson Farms')
+,(18, 'Kiewit')
+,(19, 'Continental Airlines')
+,(20, 'Jarden Corporation')
+,(21, 'Cummins Engine')
+,(22, 'Capital One Financial Corporation')
+,(23, 'Exxonmobil')
+,(24, 'Freeport-mcmoran Copper & Gold')
+,(25, 'Quiksilver')
+,(26, 'Adobe Systemsorporated')
+,(27, 'Levi Strauss And Co')
+,(28, 'Hasbro')
+,(29, 'W. R. Berkley Corporation')
+,(30, 'Metlife')
+,(31, 'Southern Company')
+,(32, 'Targa Resources')
+,(33, 'Ametek')
+,(34, 'Reader''s Digest Association')
+,(35, 'Directv')
+,(36, 'American Tire Distributors')
+,(37, 'Berry Plastics Corporation')
+,(38, 'The Kroger Co')
+,(39, 'Coventry Health Care')
+,(40, 'Bristol Myers Squibb Company')
+,(41, 'Flowers Foods')
+,(42, 'Genworth Financial')
+,(43, 'Nationwide Insurance Company')
+,(44, 'The Scotts Miracle-gro Company')
+,(45, 'Bio-rad Laboratories')
+,(46, 'Teradata Corporation')
+,(47, 'Constellation Brands')
+,(48, 'Republic Airways Holdings')
+,(49, 'Republic Services')
+,(50, 'Graphic Packaging Holding Company')
+,(51, 'Beckman Coulter');
 
 # alumni
 
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (01, 400401, 'Lennon Mccullough', 'Lennon.MCCULL1787@mail2web.com', '2256198495', '8378 Conservatory', 01, '94579', 23, 'Sales Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (02, 400402, 'Matias Gamble', 'Mati.GAMB9672@hushmail.com', '7573492222', '5262 Randolph', 01, '06954', 05, 'Senior Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (03, 400403, 'Ainsley Mclaughlin', 'Ainsley.MCLAUGH2847@mail2web.com', '5708831725', '528 Evergreen', 02, '57013', 05, 'Business Analyst');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (04, 400404, 'Jessie Finley', 'Jessie.FIN6992@yahoo.com', '9387744791', '7594 Holbrook', 02, '43593', 02, 'Senior Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (05, 400405, 'Dallas Cross', 'Dallas.CR5969@mail2web.com', '2527320124', '2834 Private', 05, '97339', 26, 'Data Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (06, 400406, 'Raymond Leblanc', 'Raymon.LEB2200@live.com', '7192831062', '9724 Prairie Park', 01, '30062', 31, 'Executive Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (07, 400407, 'Lainey Davenport', 'Lain.DAVEN1440@live.com', '6366920691', '844 St James', 05, '93946', 36, 'Vice President');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (08, 400408, 'Quintin Lyons', 'Quintin.LY8671@gmail.com', '5419994982', '6601 Walnut', 01, '80632', 01, 'Senior Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (09, 400409, 'Corinne Cortez', 'Cor.CORT9235@live.com', '8134978207', '9549 Chicago River', 03, '68689 ', 40, 'Human Resources');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (10, 400410, 'Rogelio House', 'Rogelio.HOU1129@live.com', '7475141618', '5559 Laramie', 10, '70647', 06, 'Customer Service Representative');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (11, 400411, 'Yoselin Armstrong', 'Yosel.ARMSTRONG7942@live.com', '9518493985', '4783 North Shore', 10, '23220', 49, 'Software Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (12, 400412, 'Israel Baxter', 'Isra.BAX4207@live.com', '5599900052', '9552 Elbridge', 01, '89665', 15, 'Marketing Director');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (13, 400413, 'Sullivan Powers', 'Sull.POW6526@gmail.com', '2624146124', '1450 Sheridan', 01, '48016', 32, 'Vice President');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (14, 400414, 'Londyn Henson', 'Londyn.HENSO3764@yahoo.com', '5172638118', '2784 Kedvale', 09, '38320', 49, 'Project Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (15, 400415, 'Iris Chambers', 'Iris.CHAMB2765@mail2web.com', '7709677500', '6504 Germania', 03, '70469', 31, 'Office Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (16, 400416, 'Trent Roberson', 'Tren.ROBE8413@gmail.com', '5032718076', '3048 Harper', 07, '06140', 17, 'Vice President');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (17, 400417, 'Tinley Bell', 'Tin.BE4516@live.com', '4429487578', '5200 Bennett', 08, '33072', 03, 'Sales Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (18, 400418, 'Luka Sharpe', 'Lu.SHA5584@hushmail.com', '6313844462', '1021 Douglas', 09, '32333', 24, 'Administrative Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (19, 400419, 'Kailynn Meyer', 'Kailyn.MEY5479@hushmail.com', '2168499363', '933 Fuller', 07, '35847', 09, 'Software Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (20, 400420, 'Ishaan Allen', 'Ishaan.AL6087@gmail.com', '7012206716', '3103 Village', 03, '35871', 35, 'Accountant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (21, 400421, 'Armani Holman', 'Arm.HOLM7515@yahoo.com', '9513226962', '3039 Erie', 10, '89058', 41, 'Director Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (22, 400422, 'Brandon Vinson', 'Bran.VINSO6863@yahoo.com', '2603633588', '7265 Burley', 04, '80233', 38, 'Data Engineer Clerk');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (23, 400423, 'Marianna Morse', 'Marianna.MORS7166@yahoo.com', '9372631936', '4644 Arthington', 03, '38705', 03, 'Sales Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (24, 400424, 'Valeria Rush', 'Valer.RUSH1203@live.com', '3099949087', '6369 138th', 02, '36120 ', 26, 'Project Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (25, 400425, 'Coleman Murray', 'Col.MURRA4855@mail2web.com', '6822227601', '6070 Butler', 05, '76005', 29, 'Administrative Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (26, 400426, 'Tyree Noel', 'Tyr.NOEL7301@live.com', '5076159628', '2518 Webster', 07, '92571', 48, 'Senior Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (27, 400427, 'Blaine Bradshaw', 'Blaine.BRAD6459@yahoo.com', '4252037791', '2786 Winnemac', 07, '98092', 05, 'Senior Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (28, 400428, 'Danny Bishop', 'Dan.BISHO4985@yahoo.com', '2105567228', '1731 Brompton', 01, '33926', 34, 'Senior Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (29, 400429, 'Rebekah Fernandez', 'Rebekah.FERNANDEZ7317@live.com', '2679903252', '1375 Brandon', 1, '89590', 46, 'Customer Service Representative');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (30, 400430, 'Linda Holder', 'Linda.HOLD3292@yahoo.com', '7578888514', '7893 Hood', 03, '97591', 22, 'Accountant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (31, 400431, 'Alyssa Charles', 'Alyss.CHARLE3234@gmail.com', '9523599684', '8715 Seminole', 09, '30922', 06, 'Human Resources Director');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (32, 400432, 'Adriel Orr', 'Adri.OR7827@yahoo.com', '3088765742', '2594 Paulina', 07, '95359', 04, 'Senior Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (33, 400433, 'Jonas Mcknight', 'Jonas.MCKNIGHT6259@live.com', '5014772368', '300 Kennison', 02, '48048', 27, 'Operational Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (34, 400434, 'Millie Wright', 'Mil.WRI1643@gmail.com', '7851331696', '4892 Caldwell', 01, '70768', 11, 'Data Analyst');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (35, 400435, 'Deborah Obrien', 'Debor.OBRIEN8177@gmail.com', '4016053223', '6948 Fulton Market', 10, '19930', 48, 'Director Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (36, 400436, 'Malcolm Gentry', 'Mal.GENTRY7087@yahoo.com', '9042953805', '9972 Dan Ryan Ib Stevenson', 03, '95736', 21, 'Accountant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (37, 400437, 'Ximena Sparks', 'Ximen.SPARK5942@live.com', '7729013926', '4054 Bishop', 04, '30940', 19, 'Senior Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (38, 400438, 'Dakota Price', 'Dakot.PRIC9423@hushmail.com', '9803832232', '8219 Haynes', 08, '06938', 22, 'Marketing Director');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (39, 400439, 'Nicholas Ratliff', 'Nicho.RAT3436@yahoo.com', '9897544329', '2813 Cottage', 08, '85425', 27, 'Vice President');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (40, 400440, 'Sophie Wilkins', 'Sophi.WILKINS3656@hushmail.com', '3524151787', '1411 Marquette', 01, '60552', 16, 'Software Engineer');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (41, 400441, 'Karlie Rutledge', 'Karli.RUTLEDG1334@mail2web.com', '6575061696', '5254 Kilpatrick', 03, '32860', 35, 'Office Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (42, 400442, 'Barbara Ford', 'Bar.FOR4478@live.com', '4756548366', '6596 Navarre', 06, '02425', 02, 'Executive Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (43, 400443, 'Reese Fisher', 'Ree.FIS7374@yahoo.com', '8185520297', '5121 Winston', 02, '84026', 22, 'Executive Assistant');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (44, 400444, 'Solomon Collins', 'Solomo.COL3170@live.com', '8437487154', '6946 Kennedy Ogden Av', 01, '48817', 47, 'Senior Data Scientist');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (45, 400445, 'Lucy Boyd', 'Lu.BOYD9078@gmail.com', '6076150258', '9747 Germania', 01, '92986', 48, 'Vice President');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (46, 400446, 'Sienna Pickett', 'Sie.PIC1268@hushmail.com', '9795358716', '5153 72nd', 03, '14226', 23, 'Sales Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (47, 400447, 'Alonso Finch', 'Alonso.FIN9499@yahoo.com', '7631148200', '8421 108th', 03, '78740', 23, 'Project Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (48, 400448, 'Ezekiel Rosa', 'Ezek.ROSA7590@yahoo.com', '4845641431', '837 Artesian', 09, '32821', 34, 'Project Manager');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (49, 400449, 'Pierre Mullen', 'Pierr.MULLEN4033@hushmail.com', '5856232365', '4074 Felton', 03, '90726', 10, 'Marketing Director');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (50, 400450, 'Giovanny Sutton', 'Giovan.SUTTO9001@live.com', '5597548969', '8839 122nd', 08, '52225', 32, 'Business Analyst');
-INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, alumni_emailID, alumni_contact_no, alumni_postal_street_address, city_id, alumni_postal_zip, company_id, alumni_designation) VALUES (51, 400400, 'Perla Herring', 'Perla.HERRING5573@yahoo.com', '4141537167', '5370 Lynn White', 09, '66358', 33, 'Senior Engineer');
+INSERT INTO alumni (alumni_id, alumni_student_id, alumni_name, 
+			alumni_emailID, alumni_contact_no, 
+            alumni_postal_street_address, city_id, 
+            alumni_postal_zip, company_id, alumni_designation) 
+VALUES (01, 400401, 'Lennon Mccullough', 'Lennon.MCCULL1787@mail2web.com', '2256198495', '8378 Conservatory', 01, '94579', 23, 'Sales Manager')
+,(02, 400402, 'Matias Gamble', 'Mati.GAMB9672@hushmail.com', '7573492222', '5262 Randolph', 01, '06954', 05, 'Senior Engineer')
+,(03, 400403, 'Ainsley Mclaughlin', 'Ainsley.MCLAUGH2847@mail2web.com', '5708831725', '528 Evergreen', 02, '57013', 05, 'Business Analyst')
+,(04, 400404, 'Jessie Finley', 'Jessie.FIN6992@yahoo.com', '9387744791', '7594 Holbrook', 02, '43593', 02, 'Senior Manager')
+,(05, 400405, 'Dallas Cross', 'Dallas.CR5969@mail2web.com', '2527320124', '2834 Private', 05, '97339', 26, 'Data Engineer')
+,(06, 400406, 'Raymond Leblanc', 'Raymon.LEB2200@live.com', '7192831062', '9724 Prairie Park', 01, '30062', 31, 'Executive Assistant')
+,(07, 400407, 'Lainey Davenport', 'Lain.DAVEN1440@live.com', '6366920691', '844 St James', 05, '93946', 36, 'Vice President')
+,(08, 400408, 'Quintin Lyons', 'Quintin.LY8671@gmail.com', '5419994982', '6601 Walnut', 01, '80632', 01, 'Senior Engineer')
+,(09, 400409, 'Corinne Cortez', 'Cor.CORT9235@live.com', '8134978207', '9549 Chicago River', 03, '68689 ', 40, 'Human Resources')
+,(10, 400410, 'Rogelio House', 'Rogelio.HOU1129@live.com', '7475141618', '5559 Laramie', 10, '70647', 06, 'Customer Service Representative')
+,(11, 400411, 'Yoselin Armstrong', 'Yosel.ARMSTRONG7942@live.com', '9518493985', '4783 North Shore', 10, '23220', 49, 'Software Engineer')
+,(12, 400412, 'Israel Baxter', 'Isra.BAX4207@live.com', '5599900052', '9552 Elbridge', 01, '89665', 15, 'Marketing Director')
+,(13, 400413, 'Sullivan Powers', 'Sull.POW6526@gmail.com', '2624146124', '1450 Sheridan', 01, '48016', 32, 'Vice President')
+,(14, 400414, 'Londyn Henson', 'Londyn.HENSO3764@yahoo.com', '5172638118', '2784 Kedvale', 09, '38320', 49, 'Project Manager')
+,(15, 400415, 'Iris Chambers', 'Iris.CHAMB2765@mail2web.com', '7709677500', '6504 Germania', 03, '70469', 31, 'Office Assistant')
+,(16, 400416, 'Trent Roberson', 'Tren.ROBE8413@gmail.com', '5032718076', '3048 Harper', 07, '06140', 17, 'Vice President')
+,(17, 400417, 'Tinley Bell', 'Tin.BE4516@live.com', '4429487578', '5200 Bennett', 08, '33072', 03, 'Sales Manager')
+,(18, 400418, 'Luka Sharpe', 'Lu.SHA5584@hushmail.com', '6313844462', '1021 Douglas', 09, '32333', 24, 'Administrative Assistant')
+,(19, 400419, 'Kailynn Meyer', 'Kailyn.MEY5479@hushmail.com', '2168499363', '933 Fuller', 07, '35847', 09, 'Software Engineer')
+,(20, 400420, 'Ishaan Allen', 'Ishaan.AL6087@gmail.com', '7012206716', '3103 Village', 03, '35871', 35, 'Accountant')
+,(21, 400421, 'Armani Holman', 'Arm.HOLM7515@yahoo.com', '9513226962', '3039 Erie', 10, '89058', 41, 'Director Assistant')
+,(22, 400422, 'Brandon Vinson', 'Bran.VINSO6863@yahoo.com', '2603633588', '7265 Burley', 04, '80233', 38, 'Data Engineer Clerk')
+,(23, 400423, 'Marianna Morse', 'Marianna.MORS7166@yahoo.com', '9372631936', '4644 Arthington', 03, '38705', 03, 'Sales Manager')
+,(24, 400424, 'Valeria Rush', 'Valer.RUSH1203@live.com', '3099949087', '6369 138th', 02, '36120 ', 26, 'Project Manager')
+,(25, 400425, 'Coleman Murray', 'Col.MURRA4855@mail2web.com', '6822227601', '6070 Butler', 05, '76005', 29, 'Administrative Assistant')
+,(26, 400426, 'Tyree Noel', 'Tyr.NOEL7301@live.com', '5076159628', '2518 Webster', 07, '92571', 48, 'Senior Manager')
+,(27, 400427, 'Blaine Bradshaw', 'Blaine.BRAD6459@yahoo.com', '4252037791', '2786 Winnemac', 07, '98092', 05, 'Senior Manager')
+,(28, 400428, 'Danny Bishop', 'Dan.BISHO4985@yahoo.com', '2105567228', '1731 Brompton', 01, '33926', 34, 'Senior Manager')
+,(29, 400429, 'Rebekah Fernandez', 'Rebekah.FERNANDEZ7317@live.com', '2679903252', '1375 Brandon', 1, '89590', 46, 'Customer Service Representative')
+,(30, 400430, 'Linda Holder', 'Linda.HOLD3292@yahoo.com', '7578888514', '7893 Hood', 03, '97591', 22, 'Accountant')
+,(31, 400431, 'Alyssa Charles', 'Alyss.CHARLE3234@gmail.com', '9523599684', '8715 Seminole', 09, '30922', 06, 'Human Resources Director')
+,(32, 400432, 'Adriel Orr', 'Adri.OR7827@yahoo.com', '3088765742', '2594 Paulina', 07, '95359', 04, 'Senior Engineer')
+,(33, 400433, 'Jonas Mcknight', 'Jonas.MCKNIGHT6259@live.com', '5014772368', '300 Kennison', 02, '48048', 27, 'Operational Manager')
+,(34, 400434, 'Millie Wright', 'Mil.WRI1643@gmail.com', '7851331696', '4892 Caldwell', 01, '70768', 11, 'Data Analyst')
+,(35, 400435, 'Deborah Obrien', 'Debor.OBRIEN8177@gmail.com', '4016053223', '6948 Fulton Market', 10, '19930', 48, 'Director Assistant')
+,(36, 400436, 'Malcolm Gentry', 'Mal.GENTRY7087@yahoo.com', '9042953805', '9972 Dan Ryan Ib Stevenson', 03, '95736', 21, 'Accountant')
+,(37, 400437, 'Ximena Sparks', 'Ximen.SPARK5942@live.com', '7729013926', '4054 Bishop', 04, '30940', 19, 'Senior Engineer')
+,(38, 400438, 'Dakota Price', 'Dakot.PRIC9423@hushmail.com', '9803832232', '8219 Haynes', 08, '06938', 22, 'Marketing Director')
+,(39, 400439, 'Nicholas Ratliff', 'Nicho.RAT3436@yahoo.com', '9897544329', '2813 Cottage', 08, '85425', 27, 'Vice President')
+,(40, 400440, 'Sophie Wilkins', 'Sophi.WILKINS3656@hushmail.com', '3524151787', '1411 Marquette', 01, '60552', 16, 'Software Engineer')
+,(41, 400441, 'Karlie Rutledge', 'Karli.RUTLEDG1334@mail2web.com', '6575061696', '5254 Kilpatrick', 03, '32860', 35, 'Office Assistant')
+,(42, 400442, 'Barbara Ford', 'Bar.FOR4478@live.com', '4756548366', '6596 Navarre', 06, '02425', 02, 'Executive Assistant')
+,(43, 400443, 'Reese Fisher', 'Ree.FIS7374@yahoo.com', '8185520297', '5121 Winston', 02, '84026', 22, 'Executive Assistant')
+,(44, 400444, 'Solomon Collins', 'Solomo.COL3170@live.com', '8437487154', '6946 Kennedy Ogden Av', 01, '48817', 47, 'Senior Data Scientist')
+,(45, 400445, 'Lucy Boyd', 'Lu.BOYD9078@gmail.com', '6076150258', '9747 Germania', 01, '92986', 48, 'Vice President')
+,(46, 400446, 'Sienna Pickett', 'Sie.PIC1268@hushmail.com', '9795358716', '5153 72nd', 03, '14226', 23, 'Sales Manager')
+,(47, 400447, 'Alonso Finch', 'Alonso.FIN9499@yahoo.com', '7631148200', '8421 108th', 03, '78740', 23, 'Project Manager')
+,(48, 400448, 'Ezekiel Rosa', 'Ezek.ROSA7590@yahoo.com', '4845641431', '837 Artesian', 09, '32821', 34, 'Project Manager')
+,(49, 400449, 'Pierre Mullen', 'Pierr.MULLEN4033@hushmail.com', '5856232365', '4074 Felton', 03, '90726', 10, 'Marketing Director')
+,(50, 400450, 'Giovanny Sutton', 'Giovan.SUTTO9001@live.com', '5597548969', '8839 122nd', 08, '52225', 32, 'Business Analyst')
+,(51, 400400, 'Perla Herring', 'Perla.HERRING5573@yahoo.com', '4141537167', '5370 Lynn White', 09, '66358', 33, 'Senior Engineer');
 
 #alumni_program
 
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (1, 1, 21, 1990);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (2, 2, 8, 2010);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (3, 3, 2, 2014);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (4, 4, 6, 1991);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (5, 5, 8, 2005);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (6, 6, 2, 2012);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (7, 7, 4, 2008);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (8, 8, 3, 1996);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (9, 9, 4, 1992);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (10, 10, 24, 2010);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (11, 11, 1, 2002);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (12, 12, 18, 2013);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (13, 13, 25, 2002);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (14, 14, 23, 2013);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (15, 15, 2, 2005);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (16, 16, 7, 2003);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (17, 17, 18, 1991);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (18, 18, 11, 2002);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (19, 19, 2, 2004);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (20, 20, 22, 2008);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (21, 21, 15, 1996);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (22, 22, 12, 1998);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (23, 23, 6, 1994);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (24, 24, 8, 2010);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (25, 25, 25, 1992);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (26, 26, 17, 2010);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (27, 27, 14, 1991);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (28, 28, 21, 1999);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (29, 29, 22, 2013);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (30, 30, 7, 1996);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (31, 31, 16, 1995);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (32, 32, 7, 1991);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (33, 33, 8, 1999);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (34, 34, 3, 1992);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (35, 35, 15, 1995);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (36, 36, 22, 2002);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (37, 37, 3, 2009);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (38, 38, 19, 2002);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (39, 39, 6, 2012);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (40, 40, 16, 2003);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (41, 41, 24, 2003);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (42, 42, 22, 1996);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (43, 43, 20, 1996);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (44, 44, 12, 2013);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (45, 45, 14, 2001);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (46, 46, 9, 1996);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (47, 47, 5, 2010);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (48, 48, 21, 2005);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (49, 49, 3, 1999);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (50, 50, 15, 1998);
-INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (51, 51, 2, 2000);
+INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) 
+VALUES (1, 1, 21, 1990)
+,(2, 2, 8, 2010)
+,(3, 3, 2, 2014)
+,(4, 4, 6, 1991)
+,(5, 5, 8, 2005)
+,(6, 6, 2, 2012)
+,(7, 7, 4, 2008)
+,(8, 8, 3, 1996)
+,(9, 9, 4, 1992)
+,(10, 10, 24, 2010)
+,(11, 11, 1, 2002)
+,(12, 12, 18, 2013)
+,(13, 13, 25, 2002)
+,(14, 14, 23, 2013)
+,(15, 15, 2, 2005)
+,(16, 16, 7, 2003)
+,(17, 17, 18, 1991)
+,(18, 18, 11, 2002)
+,(19, 19, 2, 2004)
+,(20, 20, 22, 2008)
+,(21, 21, 15, 1996)
+,(22, 22, 12, 1998)
+,(23, 23, 6, 1994)
+,(24, 24, 8, 2010)
+,(25, 25, 25, 1992)
+,(26, 26, 17, 2010)
+,(27, 27, 14, 1991)
+,(28, 28, 21, 1999)
+,(29, 29, 22, 2013)
+,(30, 30, 7, 1996)
+,(31, 31, 16, 1995)
+,(32, 32, 7, 1991)
+,(33, 33, 8, 1999)
+,(34, 34, 3, 1992)
+,(35, 35, 15, 1995)
+,(36, 36, 22, 2002)
+,(37, 37, 3, 2009)
+,(38, 38, 19, 2002)
+,(39, 39, 6, 2012)
+,(40, 40, 16, 2003)
+,(41, 41, 24, 2003)
+,(42, 42, 22, 1996)
+,(43, 43, 20, 1996)
+,(44, 44, 12, 2013)
+,(45, 45, 14, 2001)
+,(46, 46, 9, 1996)
+,(47, 47, 5, 2010)
+,(48, 48, 21, 2005)
+,(49, 49, 3, 1999)
+,(50, 50, 15, 1998)
+,(51, 51, 2, 2000);
 
 #all_event
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (01, 'Alumni Meet 2013', '2013-01-24 16:30:00', '2013-01-24 18:30:00', 'Garfield Community Center', '12', 9);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (03, 'Rendezvous 2013', '2013-10-16 13:00:00', '2013-01-24 15:00:00', 'Pacific Hall', '29', 7);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (02, 'Senior Signature 2013', '2013-04-14 09:30:00', '2013-01-24 13:00:00', 'International Community Center', '17', 6);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (04, 'Alumni Meet 2014', '2014-01-20 16:30:00', '2014-01-20 18:30:00', 'Garfield Community Center', '12', 9);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (05, 'Rendezvous 2014', '2014-10-06 13:00:00', '2014-10-06 15:00:00', 'Pacific Hall', '29', 7);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (06, 'Senior Signature 2014', '2014-04-04 09:30:00', '2014-04-04 13:00:00', 'International Community Center', '17', 6);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (07, 'Alumni Meet 2015', '2015-01-08 16:30:00', '2015-01-08 18:30:00', 'Garfield Community Center', '12', 9);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (08, 'Rendezvous 2015', '2015-10-26 13:00:00', '2015-10-26 15:00:00', 'Pacific Hall', '29', 7);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (09, 'Senior Signature 2015', '2015-04-01 09:30:00', '2015-04-01 13:00:00', 'International Community Center', '17', 6);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (10, 'Alumni Meet 2016', '2016-01-20 16:30:00', '2016-01-20 18:30:00', 'Garfield Community Center', '12', 9);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (11, 'Rendezvous 2016', '2016-10-26 13:00:00', '2016-10-26 15:00:00', 'Pacific Hall', '29', 7);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (12, 'Senior Signature 2016', '2016-04-12 09:30:00', '2016-04-12 13:00:00', 'International Community Center', '17', 6);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (13, 'Alumni Meet 2017', '2017-01-30 16:30:00', '2017-01-30 18:30:00', 'Garfield Community Center', '12', 9);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (14, 'Rendezvous 2017', '2017-10-10 13:00:00', '2017-10-10 15:00:00', 'Pacific Hall', '29', 7);
-INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) VALUES (15, 'Senior Signature 2017', '2017-04-20 09:30:00', '2017-04-20 13:00:00', 'International Community Center', '17', 6);
+INSERT INTO all_events (all_events_id, all_events_name, all_events_start_time, all_events_end_time, all_events_address, department_id, city_id) 
+VALUES (01, 'Alumni Meet 2013', '2013-01-24 16:30:00', '2013-01-24 18:30:00', 'Garfield Community Center', '12', 9)
+,(02, 'Senior Signature 2013', '2013-04-14 09:30:00', '2013-01-24 13:00:00', 'International Community Center', '17', 6)
+,(03, 'Rendezvous 2013', '2013-10-16 13:00:00', '2013-01-24 15:00:00', 'Pacific Hall', '29', 7)
+,(04, 'Alumni Meet 2014', '2014-01-20 16:30:00', '2014-01-20 18:30:00', 'Garfield Community Center', '12', 9)
+,(05, 'Rendezvous 2014', '2014-10-06 13:00:00', '2014-10-06 15:00:00', 'Pacific Hall', '29', 7)
+,(06, 'Senior Signature 2014', '2014-04-04 09:30:00', '2014-04-04 13:00:00', 'International Community Center', '17', 6)
+,(07, 'Alumni Meet 2015', '2015-01-08 16:30:00', '2015-01-08 18:30:00', 'Garfield Community Center', '12', 9)
+,(08, 'Rendezvous 2015', '2015-10-26 13:00:00', '2015-10-26 15:00:00', 'Pacific Hall', '29', 7)
+,(09, 'Senior Signature 2015', '2015-04-01 09:30:00', '2015-04-01 13:00:00', 'International Community Center', '17', 6)
+,(10, 'Alumni Meet 2016', '2016-01-20 16:30:00', '2016-01-20 18:30:00', 'Garfield Community Center', '12', 9)
+,(11, 'Rendezvous 2016', '2016-10-26 13:00:00', '2016-10-26 15:00:00', 'Pacific Hall', '29', 7)
+,(12, 'Senior Signature 2016', '2016-04-12 09:30:00', '2016-04-12 13:00:00', 'International Community Center', '17', 6)
+,(13, 'Alumni Meet 2017', '2017-01-30 16:30:00', '2017-01-30 18:30:00', 'Garfield Community Center', '12', 9)
+,(14, 'Rendezvous 2017', '2017-10-10 13:00:00', '2017-10-10 15:00:00', 'Pacific Hall', '29', 7)
+,(15, 'Senior Signature 2017', '2017-04-20 09:30:00', '2017-04-20 13:00:00', 'International Community Center', '17', 6);
 
 #alumni_event
 
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (00, 03, 48, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (01, 09, 47, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (02, 03, 21, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (03, 06, 37, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (04, 04, 08, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (05, 03, 06, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (06, 09, 05, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (07, 06, 06, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (08, 08, 14, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (09, 02, 47, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (10, 02, 06, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (11, 08, 36, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (12, 05, 07, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (13, 02, 11, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (14, 07, 44, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (15, 02, 02, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (16, 02, 43, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (17, 06, 37, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (18, 05, 20, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (19, 01, 41, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (20, 08, 35, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (21, 02, 01, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (22, 03, 37, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (23, 01, 40, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (24, 06, 37, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (25, 07, 06, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (26, 01, 23, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (27, 01, 16, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (28, 04, 46, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (29, 06, 09, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (30, 06, 28, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (31, 07, 17, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (32, 04, 17, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (33, 01, 04, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (34, 08, 01, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (35, 03, 11, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (36, 07, 40, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (37, 08, 15, 1);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (38, 03, 11, 0);
-INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) VALUES (39, 05, 32, 1);
+INSERT INTO alum_events (alum_events_id,all_events_id, alumni_id, attended) 
+VALUES (01, 09, 47, 1)
+,(02, 03, 21, 1)
+,(03, 06, 37, 1)
+,(04, 04, 08, 1)
+,(05, 03, 06, 0)
+,(06, 09, 05, 0)
+,(07, 06, 06, 1)
+,(08, 08, 14, 1)
+,(09, 02, 47, 0)
+,(10, 02, 06, 1)
+,(11, 08, 36, 0)
+,(12, 05, 07, 0)
+,(13, 02, 11, 0)
+,(14, 07, 44, 1)
+,(15, 02, 02, 1)
+,(16, 02, 43, 0)
+,(17, 06, 37, 1)
+,(18, 05, 20, 0)
+,(19, 01, 41, 1)
+,(20, 08, 35, 0)
+,(21, 02, 01, 0)
+,(22, 03, 37, 1)
+,(23, 01, 40, 0)
+,(24, 06, 37, 0)
+,(25, 07, 06, 0)
+,(26, 01, 23, 1)
+,(27, 01, 16, 1)
+,(28, 04, 46, 1)
+,(29, 06, 09, 1)
+,(30, 06, 28, 1)
+,(31, 07, 17, 0)
+,(32, 04, 17, 0)
+,(33, 01, 04, 1)
+,(34, 08, 01, 1)
+,(35, 03, 11, 0)
+,(36, 07, 40, 1)
+,(37, 08, 15, 1)
+,(38, 03, 11, 0)
+,(39, 05, 32, 1)
+,(40, 03, 48, 1);
+
+INSERT INTO alumni_donation
+(alumni_donation_id,
+alumni_donation_memo,
+alumni_donation_amount,
+alumni_id)
+VALUES
+(1, 'New Machine Learning Building', 100, 05)
+,(2, 'New Machine Learning Building', 80, 08)
+,(3, 'New Machine Learning Building', 50, 10)
+,(4, 'Annual Scholarship fund', 100, 21)
+,(5, 'Annual Scholarship fund', 100, 1)
+,(6, 'Annual Scholarship fund', 100, 3)
+,(7, 'New Machine Learning Building', 200, 11)
+,(8, 'New Machine Learning Building', 100, 18)
+,(9, 'Annual Scholarship fund', 100, 18)
+,(10, 'New Research Lab', 100, 15)
+,(11, 'New Machine Learning Building', 100, 23)
+,(12, 'New Research Lab', 80, 33)
+,(13, 'New Machine Learning Building', 50, 22)
+,(14, 'Annual Scholarship fund', 100, 16)
+,(15, 'Annual International Scholarship fund', 100, 14)
+,(16, 'Annual Scholarship fund', 100, 33)
+,(17, 'New Research Lab', 200, 31)
+,(18, 'New Machine Learning Building', 100, 19)
+,(19, 'Annual International Scholarship fund', 100, 28)
+,(20, 'New Machine Learning Building', 100, 45)
+,(21, 'New Machine Learning Building', 200, 43)
+,(22, 'New Research Lab', 50, 43)
+,(23, 'New Machine Learning Building', 150, 42)
+,(24, 'Annual Scholarship fund', 120, 46)
+,(25, 'Annual International Scholarship fund', 150, 44)
+,(26, 'Annual Scholarship fund', 100, 39)
+,(27, 'New Research Lab', 200, 41)
+,(28, 'New Machine Learning Building', 100, 49)
+,(29, 'Annual International Scholarship fund', 100, 58)
+,(30, 'New Machine Learning Building', 100, 59);
