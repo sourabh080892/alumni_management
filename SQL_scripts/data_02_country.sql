@@ -1,3 +1,4 @@
+use segr5300;
 INSERT INTO country (country_id, country_name) VALUES (11, 'China');
 INSERT INTO country (country_id, country_name) VALUES (1, 'Norway');
 INSERT INTO country (country_id, country_name) VALUES (2, 'Korea');
@@ -9,3 +10,4 @@ INSERT INTO country (country_id, country_name) VALUES (7, 'Australia');
 INSERT INTO country (country_id, country_name) VALUES (8, 'Argentina');
 INSERT INTO country (country_id, country_name) VALUES (9, 'Canada');
 INSERT INTO country (country_id, country_name) VALUES (10, 'United Kingdom');
+INSERT INTO country (country_id, country_name) VALUES (12, 'India');

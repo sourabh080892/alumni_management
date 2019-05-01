@@ -1,3 +1,4 @@
+use segr5300;
 INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (1, 1, 21, 1990);
 INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (2, 2, 8, 2010);
 INSERT INTO alum_program (alum_program_id, alumni_id, program_Id, alum_program_grad_year) VALUES (3, 3, 2, 2014);

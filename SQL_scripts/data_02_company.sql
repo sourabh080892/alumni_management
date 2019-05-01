@@ -1,4 +1,4 @@
-
+use segr5300;
 INSERT INTO company (company_id, company_name) VALUES (01, 'Adams Resources & Energy');
 INSERT INTO company (company_id, company_name) VALUES (02, 'Campbell Soup Company');
 INSERT INTO company (company_id, company_name) VALUES (03, 'Synnex Corporation');

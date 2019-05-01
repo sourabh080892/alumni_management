@@ -1,3 +1,4 @@
+use segr5300;
 INSERT INTO department (department_id, department_name) VALUES ('60','Art and Art History');
 INSERT INTO department (department_id, department_name) VALUES ('01','Accounting');
 INSERT INTO department (department_id, department_name) VALUES ('02','Adult Education & Training');
@@ -57,5 +58,4 @@ INSERT INTO department (department_id, department_name) VALUES ('55','Teacher Ed
 INSERT INTO department (department_id, department_name) VALUES ('56','Theology and Religious Studies');
 INSERT INTO department (department_id, department_name) VALUES ('57','Teaching English to Speakers of Other Languages');
 INSERT INTO department (department_id, department_name) VALUES ('58','University Core');
-INSERT INTO department (department_id, department_name) VALUES ('59','Web Application & Technology Studies');
 INSERT INTO department (department_id, department_name) VALUES ('59','Web Application & Technology Studies');
