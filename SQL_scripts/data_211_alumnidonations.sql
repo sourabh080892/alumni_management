@@ -1,0 +1,36 @@
+INSERT INTO alumni_donation
+(alumni_donation_id,
+alumni_donation_memo,
+alumni_donation_amount,
+alumni_id)
+VALUES
+(1, 'New Machine Learning Building', 100, 05)
+,(2, 'New Machine Learning Building', 80, 08)
+,(3, 'New Machine Learning Building', 50, 10)
+,(4, 'Annual Scholarship fund', 100, 21)
+,(5, 'Annual Scholarship fund', 100, 1)
+,(6, 'Annual Scholarship fund', 100, 3)
+,(7, 'New Machine Learning Building', 200, 11)
+,(8, 'New Machine Learning Building', 100, 18)
+,(9, 'Annual Scholarship fund', 100, 18)
+,(10, 'New Research Lab', 100, 15)
+,(11, 'New Machine Learning Building', 100, 23)
+,(12, 'New Research Lab', 80, 33)
+,(13, 'New Machine Learning Building', 50, 22)
+,(14, 'Annual Scholarship fund', 100, 16)
+,(15, 'Annual International Scholarship fund', 100, 14)
+,(16, 'Annual Scholarship fund', 100, 33)
+,(17, 'New Research Lab', 200, 31)
+,(18, 'New Machine Learning Building', 100, 19)
+,(19, 'Annual International Scholarship fund', 100, 28)
+,(20, 'New Machine Learning Building', 100, 45)
+,(21, 'New Machine Learning Building', 200, 43)
+,(22, 'New Research Lab', 50, 43)
+,(23, 'New Machine Learning Building', 150, 42)
+,(24, 'Annual Scholarship fund', 120, 46)
+,(25, 'Annual International Scholarship fund', 150, 44)
+,(26, 'Annual Scholarship fund', 100, 39)
+,(27, 'New Research Lab', 200, 41)
+,(28, 'New Machine Learning Building', 100, 49)
+,(29, 'Annual International Scholarship fund', 100, 58)
+,(30, 'New Machine Learning Building', 100, 59);
