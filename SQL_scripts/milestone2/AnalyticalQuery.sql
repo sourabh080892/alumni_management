@@ -21,3 +21,23 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 
+##########################################################################################
+# aggregate total alumni and donation by department.
+SELECT 'Department ID','Department Name','Number of Alumni','Total Alumni Donation'
+Union all
+select d.department_id, d.department_name,count(a.alumni_id) as no_alumni, sum(ad.alumni_donation_amount) as total_donation
+from alumni a inner join alum_program al on a.alumni_id = al.alumni_id
+			inner join program p on al.program_id	= p.program_id
+            inner join department d on p.department_id = d.department_id
+            inner join company c on a.company_id = c.company_id
+            inner join alumni_donation ad on ad.alumni_id = a.alumni_id
+group by d.department_id,d.department_name
+/* Save the query results to a file */
+
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/dept_alum_donate.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+##########################################################################################
+# 
