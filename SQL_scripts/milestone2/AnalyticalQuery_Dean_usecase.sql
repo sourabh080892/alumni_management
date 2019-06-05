@@ -32,6 +32,7 @@ limit 3;
 # After deciding the city, now we want all the details from that city
 select 	c.city_name as 'City Name',
 		a.alumni_name as 'Alumni Name',
+        a.alumni_emailID as 'Email ID',
         GROUP_CONCAT(ale.all_events_name SEPARATOR ', ') as 'Events Attended',
         p.program_name as 'Program Name',
         ad.alumni_donation_amount as 'Donation Amount',
