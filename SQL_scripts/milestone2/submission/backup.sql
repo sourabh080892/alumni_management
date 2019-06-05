@@ -348,16 +348,26 @@ SET character_set_client = utf8mb4;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `viewdonationbycampaign`
+-- Temporary view structure for view `viewalumniprofilesnapshot`
 --
 
-DROP TABLE IF EXISTS `viewdonationbycampaign`;
-/*!50001 DROP VIEW IF EXISTS `viewdonationbycampaign`*/;
+DROP TABLE IF EXISTS `viewalumniprofilesnapshot`;
+/*!50001 DROP VIEW IF EXISTS `viewalumniprofilesnapshot`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8mb4;
-/*!50001 CREATE VIEW `viewdonationbycampaign` AS SELECT 
- 1 AS `CampaignName`,
- 1 AS `TotalDonation_USD`*/;
+/*!50001 CREATE VIEW `viewalumniprofilesnapshot` AS SELECT 
+ 1 AS `alumni_id`,
+ 1 AS `alumni_student_id`,
+ 1 AS `alumni_name`,
+ 1 AS `alumni_emailID`,
+ 1 AS `contact_no`,
+ 1 AS `address`,
+ 1 AS `zip_code`,
+ 1 AS `city`,
+ 1 AS `company`,
+ 1 AS `total_donations`,
+ 1 AS `events_attended`,
+ 1 AS `programs_attended`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -382,7 +392,7 @@ SET character_set_client = @saved_cs_client;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
@@ -415,7 +425,7 @@ DELIMITER ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
@@ -476,7 +486,7 @@ DELIMITER ;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
 /*!50001 SET character_set_client      = utf8mb4 */;
 /*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=CURRENT_USER SQL SECURITY DEFINER */
 /*!50001 VIEW `viewalleventscatalogue` AS select `e`.`all_events_name` AS `all_events_name`,date_format(`e`.`all_events_start_time`,'%e %b %Y') AS `event_date`,date_format(`e`.`all_events_start_time`,'%r') AS `event_start_time`,date_format(`e`.`all_events_end_time`,'%r') AS `event_end_time`,`d`.`department_name` AS `host_department`,`e`.`all_events_address` AS `location`,`c`.`city_name` AS `city_name`,`cn`.`country_name` AS `country_name` from (((`all_events` `e` left join `department` `d` on((`e`.`department_id` = `d`.`department_id`))) left join `city` `c` on((`e`.`city_id` = `c`.`city_id`))) left join `country` `cn` on((`c`.`country_id` = `cn`.`country_id`))) */;
@@ -485,19 +495,19 @@ DELIMITER ;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
--- Final view structure for view `viewdonationbycampaign`
+-- Final view structure for view `viewalumniprofilesnapshot`
 --
 
-/*!50001 DROP VIEW IF EXISTS `viewdonationbycampaign`*/;
+/*!50001 DROP VIEW IF EXISTS `viewalumniprofilesnapshot`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
 /*!50001 SET character_set_client      = utf8mb4 */;
 /*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=CURRENT_USER SQL SECURITY DEFINER */
-/*!50001 VIEW `viewdonationbycampaign` AS select `d`.`alumni_donation_memo` AS `CampaignName`,sum(`d`.`alumni_donation_amount`) AS `TotalDonation_USD` from `alumni_donation` `d` group by `d`.`alumni_donation_memo` */;
+/*!50001 VIEW `viewalumniprofilesnapshot` AS select `a`.`alumni_id` AS `alumni_id`,`a`.`alumni_student_id` AS `alumni_student_id`,`a`.`alumni_name` AS `alumni_name`,`a`.`alumni_emailID` AS `alumni_emailID`,`a`.`alumni_contact_no` AS `contact_no`,`a`.`alumni_postal_street_address` AS `address`,`a`.`alumni_postal_zip` AS `zip_code`,`city`.`city_name` AS `city`,`cmp`.`company_name` AS `company`,coalesce(`donations`.`total_donation`,0) AS `total_donations`,coalesce(`evnts`.`events_attended`,0) AS `events_attended`,coalesce(`prgms`.`programs_attended`,0) AS `programs_attended` from (((((`alumni` `a` left join (select `alumni_donation`.`alumni_id` AS `alumni_id`,sum(`alumni_donation`.`alumni_donation_amount`) AS `total_donation` from `alumni_donation` group by `alumni_donation`.`alumni_id`) `donations` on((`a`.`alumni_id` = `donations`.`alumni_id`))) left join (select `alum_events`.`alumni_id` AS `alumni_id`,count(`alum_events`.`alum_events_id`) AS `events_attended` from `alum_events` where (`alum_events`.`attended` = 1) group by `alum_events`.`alumni_id`) `evnts` on((`a`.`alumni_id` = `evnts`.`alumni_id`))) left join (select `alum_program`.`alumni_id` AS `alumni_id`,count(`alum_program`.`program_id`) AS `programs_attended` from `alum_program` group by `alum_program`.`alumni_id`) `prgms` on((`a`.`alumni_id` = `prgms`.`alumni_id`))) left join `city` on((`a`.`city_id` = `city`.`city_id`))) left join `company` `cmp` on((`a`.`company_id` = `cmp`.`company_id`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -512,7 +522,7 @@ DELIMITER ;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
 /*!50001 SET character_set_client      = utf8mb4 */;
 /*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=CURRENT_USER SQL SECURITY DEFINER */
 /*!50001 VIEW `viewtop5donation` AS select `a`.`alumni_name` AS `alumni_name`,`d`.`Total_Donation` AS `Total_Donation` from ((select `d`.`alumni_id` AS `alumni_id`,sum(`d`.`alumni_donation_amount`) AS `Total_Donation` from `alumni_donation` `d` group by `d`.`alumni_id` order by `Total_Donation` desc limit 5) `d` left join `alumni` `a` on((`a`.`alumni_id` = `d`.`alumni_id`))) */;
@@ -529,4 +539,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-04 21:55:36
+-- Dump completed on 2019-06-05 13:42:35

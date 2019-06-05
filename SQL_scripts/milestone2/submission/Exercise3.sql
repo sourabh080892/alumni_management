@@ -84,14 +84,36 @@ DELIMITER ;
 
 -- Views
 
--- View 1 - Aggregation
-DROP VIEW IF EXISTS viewDonationByCampaign;
+-- View 1 - Aggregation & Join
+DROP VIEW IF EXISTS viewAlumniProfileSnapshot;
 
-CREATE VIEW viewDonationByCampaign AS
+CREATE VIEW viewAlumniProfileSnapshot AS
 
-SELECT alumni_donation_memo as CampaignName, SUM(alumni_donation_amount) as TotalDonation_USD 
-FROM alumni_donation d
-GROUP BY alumni_donation_memo;
+SELECT a.alumni_id, a.alumni_student_id, a.alumni_name, a.alumni_emailID,
+		alumni_contact_no as contact_no, alumni_postal_street_address as address, 
+        alumni_postal_zip as zip_code,
+        city_name as city, company_name as company,
+		COALESCE(donations.total_donation,0) as total_donations, 
+        COALESCE(evnts.events_attended,0) as events_attended,
+        COALESCE(prgms.programs_attended,0) as programs_attended
+FROM alumni a
+LEFT JOIN (SELECT alumni_id, SUM(alumni_donation_amount) as total_donation 
+		   FROM alumni_donation 
+           GROUP BY alumni_id) as donations 
+ON a.alumni_id = donations.alumni_id
+LEFT JOIN (SELECT alumni_id, COUNT(alum_events_id) as events_attended 
+		   FROM alum_events 
+           WHERE attended=1 
+           GROUP BY alumni_id) as evnts 
+ON a.alumni_id = evnts.alumni_id
+LEFT JOIN (SELECT alumni_id, COUNT(program_id) as programs_attended 
+		   FROM alum_program 
+           GROUP BY alumni_id) as prgms 
+ON a.alumni_id = prgms.alumni_id
+LEFT JOIN city 
+ON a.city_id = city.city_id
+LEFT JOIN company cmp
+ON a.company_id = cmp.company_id;
 
 -- View 2 - Joins
 DROP VIEW IF EXISTS viewAllEventsCatalogue;
