@@ -56,26 +56,59 @@ limit 3;
 
 ##########################################################################################
 # After deciding the city, now we want all the details from that city
-select 	c.city_name as 'City Name',
-		a.alumni_name as 'Alumni Name',
-        a.alumni_emailID as 'Email ID',
-        GROUP_CONCAT(ale.all_events_name SEPARATOR ', ') as 'Events Attended',
-        p.program_name as 'Program Name',
-        ad.alumni_donation_amount as 'Donation Amount',
-        co.company_name as 'Company Name'
-from city as c
-inner join alumni as a
-on c.city_id = a.city_id
-left outer join alum_events as ae
-on a.alumni_id = ae.alumni_id
-left outer join all_events as ale
-on ae.all_events_id = ale.all_events_id
-inner join alum_program as ap
-on a.alumni_id = ap.alumni_id
-inner join program as p
-on ap.program_id = p.program_id
-left outer join alumni_donation as ad
-on a.alumni_id = ad.alumni_id
-left outer join company as co
-on a.company_id = co.company_id
-group by a.alumni_name;
+SELECT 
+    c.city_name AS 'City Name',
+    a.alumni_name AS 'Alumni Name',
+    a.alumni_emailID AS 'Email ID',
+    GROUP_CONCAT(ale.all_events_name
+        SEPARATOR ', ') AS 'Events Attended',
+    p.program_name AS 'Program Name',
+    ad.alumni_donation_amount AS 'Donation Amount',
+    co.company_name AS 'Company Name',
+    city_3.adm AS 'Total Donation',
+    city_3.noc AS 'No of Companies',
+    city_3.noa AS 'No of Alumni'
+FROM
+    city AS c
+        INNER JOIN
+    alumni AS a ON c.city_id = a.city_id
+        LEFT OUTER JOIN
+    alum_events AS ae ON a.alumni_id = ae.alumni_id
+        LEFT OUTER JOIN
+    all_events AS ale ON ae.all_events_id = ale.all_events_id
+        INNER JOIN
+    alum_program AS ap ON a.alumni_id = ap.alumni_id
+        INNER JOIN
+    program AS p ON ap.program_id = p.program_id
+        LEFT OUTER JOIN
+    alumni_donation AS ad ON a.alumni_id = ad.alumni_id
+        LEFT OUTER JOIN
+    company AS co ON a.company_id = co.company_id
+        INNER JOIN
+    (SELECT 
+        c.city_id,
+            c.city_name,
+            SUM(ad.alumni_donation_amount) AS adm,
+            ci_co.no_comp AS noc,
+            ci_al.no_alumni AS noa
+    FROM
+        city AS c
+    INNER JOIN alumni AS a ON c.city_id = a.city_id
+    INNER JOIN alumni_donation AS ad ON a.alumni_id = ad.alumni_id
+    INNER JOIN (SELECT 
+        c.city_id AS 'city_id', COUNT(co.company_name) AS 'no_comp'
+    FROM
+        city AS c
+    INNER JOIN alumni AS a ON c.city_id = a.city_id
+    INNER JOIN company AS co ON a.company_id = co.company_id
+    GROUP BY c.city_name) AS ci_co ON c.city_id = ci_co.city_id
+    INNER JOIN (SELECT 
+        c.city_id AS 'city_id', COUNT(a.alumni_id) AS 'no_alumni'
+    FROM
+        city AS c
+    INNER JOIN alumni AS a ON c.city_id = a.city_id
+    GROUP BY c.city_name) AS ci_al ON c.city_id = ci_al.city_id
+    GROUP BY c.city_name
+    ORDER BY ci_co.no_comp DESC , SUM(ad.alumni_donation_amount) DESC
+    LIMIT 3) AS city_3 ON c.city_id = city_3.city_id
+GROUP BY a.alumni_name
