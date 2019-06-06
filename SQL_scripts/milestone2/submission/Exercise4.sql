@@ -111,4 +111,4 @@ FROM
     GROUP BY c.city_name
     ORDER BY ci_co.no_comp DESC , SUM(ad.alumni_donation_amount) DESC
     LIMIT 3) AS city_3 ON c.city_id = city_3.city_id
-GROUP BY a.alumni_name
+GROUP BY a.alumni_name;
